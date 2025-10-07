@@ -9,7 +9,7 @@ tasa_valor = "Cargando tasa..."
 def fetch_data(page: ft.Page, tasa_control: ft.Text):
     
     # Muestra un mensaje de carga inicial
-    tasa_control.value = "Cargando tasass..."
+    tasa_control.value = "Cargando tasas..."
     page.update()
     
     try:

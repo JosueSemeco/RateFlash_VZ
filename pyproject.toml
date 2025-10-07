@@ -1,0 +1,55 @@
+[project]
+name = "RateFlash VZ"
+version = "1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Josue Semeco", email = "semecojosue18@gmail.com" }
+]
+dependencies = [
+  "flet==0.28.3",
+  "babel==2.17.0",
+  "beautifulsoup4==4.14.2",
+  "bs4==0.0.2",
+  "certifi==2025.10.5",
+  "charset-normalizer==3.4.3",
+  "idna==3.10",
+  "pyBCV==1.1.2",
+  "requests==2.32.5",
+  "soupsieve==2.8",
+  "typing_extensions==4.15.0",
+  "urllib3==2.5.0"
+]
+
+[tool.flet]
+# org name in reverse domain name notation, e.g. "com.mycompany".
+# Combined with project.name to build bundle ID for iOS and Android apps
+org = "com.tinqidev"
+
+# project display name that is used as an app title on Android and iOS home screens,
+# shown in window titles and about app dialogs on desktop.
+product = "RateFlash VZ"
+
+# company name to display in about app dialogs
+company = "TinqiDev"
+
+# copyright text to display in about app dialogs
+copyright = "Copyright (C) 2025 by TinqiDev"
+
+[tool.flet.app]
+path = "src"
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]==0.28.3",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "0.28.3"}
+
+[tool.flet.flutter.pubspec.dependency_overrides]
+webview_flutter_android = "4.10.1"
